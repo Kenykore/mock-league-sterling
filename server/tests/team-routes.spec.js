@@ -46,7 +46,6 @@ describe('Test the team api', () => {
         }
       const user_team=    await helper.Post('/api/team',{team:team_to_create},`Bearer ${api_key}`).expect(401)
 
-     // return
     });
     test('It should successfully get all teams by a user', async () => {
         const team_get= await helper.Get('/api/team',{},user_token).expect(200)    

@@ -20,15 +20,12 @@ describe('Test the user api', () => {
       expect(user.body.success).toBeTruthy();
       user_token=user.body.token
       api_key=user.body.apiKey
-     // return
     });
     test('It should not successfully created an existing user', async () => {
         await helper.Post('/api/auth/register',{email:"keny@gmail.com",password:"bolu"},null).expect(422)
-       // return
       });
       test('User should be able to login', async () => {
         await helper.Post('/api/auth/login',{email:"keny@gmail.com",password:"bolu"},null).expect(200)
-       // return
       });
     test('It should throw error with empty request object',async ()=>{
          user= await helper.Post('/api/auth/register',{}).expect(422)
