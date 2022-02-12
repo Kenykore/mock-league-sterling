@@ -11,7 +11,7 @@
     "setupTestFrameworkScriptFile": "./jest.setup.js"
   },
   "dependencies": {
-    "ajv": "^5.0.0",
+    "ajv": "^6.12.3",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
     "connect-redis": "^3.4.2",
